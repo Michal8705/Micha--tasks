@@ -4,11 +4,13 @@ import com.crud.tasks.domain.TaskDto;
 import com.crud.tasks.mapper.TaskMapper;
 import com.crud.tasks.service.DbService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/v1/task")
 public class TaskController {
@@ -41,4 +43,9 @@ public class TaskController {
     public void createTask(@RequestBody TaskDto taskDto) {
         service.saveTask(taskMapper.mapToTask(taskDto));
     }
+//    @RequestMapping(method = RequestMethod.POST, value = "createTask",
+//            consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+//    public void createTask(TaskDto taskDto) {
+//        service.saveTask(taskMapper.mapToTask(taskDto));
+//    }
 }
