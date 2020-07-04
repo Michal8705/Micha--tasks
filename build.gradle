@@ -27,6 +27,8 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'junit:junit:4.12'
+	implementation 'junit:junit:4.12'
 //	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
 
