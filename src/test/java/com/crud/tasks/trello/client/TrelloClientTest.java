@@ -1,10 +1,8 @@
 package com.crud.tasks.trello.client;
 
-
-
 import com.crud.tasks.domain.*;
 import com.crud.tasks.trello.config.TrelloConfig;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -37,6 +35,7 @@ public class TrelloClientTest {
         when(trelloConfig.getTrelloApiEndpoint()).thenReturn("http://test.com");
         when(trelloConfig.getTrelloAppKey()).thenReturn("test");
         when(trelloConfig.getTrelloToken()).thenReturn("test");
+
         when(trelloConfig.getTrelloUsername()).thenReturn("michal54902436");
 
 
