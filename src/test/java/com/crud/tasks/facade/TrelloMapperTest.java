@@ -10,10 +10,10 @@ import java.util.List;
 
 public class TrelloMapperTest {
 
-    private TrelloMapper trelloMapper=new TrelloMapper();
+    private TrelloMapper trelloMapper = new TrelloMapper();
 
     @Test
-    public void testMapToBoards() throws Exception {
+    public void testMapToBoards() {
         //given
         List<TrelloListDto> listDto1=new ArrayList<>();
         listDto1.add(new TrelloListDto("id1","list1",false));
@@ -42,7 +42,7 @@ public class TrelloMapperTest {
     }
 
     @Test
-    public void testMapToBoardsDto() throws Exception {
+    public void testMapToBoardsDto() {
         //given
         List<TrelloList> list1=new ArrayList<>();
         list1.add(new TrelloList("id1","list1",false));
@@ -69,7 +69,7 @@ public class TrelloMapperTest {
     }
 
     @Test
-    public void testMapToList() throws Exception {
+    public void testMapToList() {
         //given
         List<TrelloListDto> listDto1=new ArrayList<>();
         listDto1.add(new TrelloListDto("id1","list1",false));
@@ -88,7 +88,7 @@ public class TrelloMapperTest {
     }
 
     @Test
-    public void testMapToListDto() throws Exception {
+    public void testMapToListDto() {
         //given
         List<TrelloList> list1 = new ArrayList<>();
         list1.add(new TrelloList("id1","list1",false));
@@ -107,7 +107,7 @@ public class TrelloMapperTest {
     }
 
     @Test
-    public void mapToCard() throws Exception {
+    public void mapToCard() {
         //given
         TrelloCardDto cardDto1 = new TrelloCardDto("card1","description1","pos1","listId1");
 
@@ -122,7 +122,7 @@ public class TrelloMapperTest {
     }
 
     @Test
-    public void testMapToCardDto() throws Exception {
+    public void testMapToCardDto(){
         //given
         TrelloCard card1 = new TrelloCard("card1","description1","pos1","listId1");
 
