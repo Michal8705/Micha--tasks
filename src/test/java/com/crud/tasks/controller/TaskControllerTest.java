@@ -31,7 +31,7 @@ public class TaskControllerTest {
     private TaskController taskController;
 
     @Test
-    public void testGetTasks() throws Exception {
+    public void shouldFetchTasks() throws Exception {
 
         //Given
         List<TaskDto> list = new ArrayList<>();
