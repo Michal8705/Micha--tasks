@@ -36,4 +36,13 @@ public class EmailScheduler {
                 "Currently in database you got: "+size+task)
         );
     }
+
+    public String numberEmail(){
+        long size = taskRepository.count();
+        String task = " tasks";
+        if(size == 1){
+            task = " task";
+        }
+        return "Currently in database you got: "+size+task;
+    }
 }
