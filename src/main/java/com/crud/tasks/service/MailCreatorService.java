@@ -45,23 +45,14 @@ public class MailCreatorService {
     }
 
     public String buildNumberOfTaksEmail(String message){
-        List<String> functionality = new ArrayList<>();
-        functionality.add("You can manage your tasks");
-        functionality.add("Provides connection with Trello Account");
-        functionality.add("Application allows sending tasks to Trello");
+
 
         Context context = new Context();
-        context.setVariable("message", message);
-        context.setVariable("tasks_url", "http://localhost:8080/crud");
-        context.setVariable("button", "visit website ");
+
         context.setVariable("admin_name", adminConfig.getAdminName());
-        context.setVariable("preview_message","preview");
-        context.setVariable("good_bye","See you next time");
         context.setVariable("company_name",adminConfig.getCompanyName());
-        context.setVariable("show_button", false);
         context.setVariable("is_friend", true);
         context.setVariable("admin_config", adminConfig);
-        context.setVariable("application_functionality", functionality);
         context.setVariable("number", emailScheduler.numberEmail());
         return templateEngine.process("mail/number-of-tasks-mail", context);
     }
